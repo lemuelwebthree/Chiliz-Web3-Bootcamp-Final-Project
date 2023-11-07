@@ -1,4 +1,4 @@
-# Virtual Meet Tempalte
+# Virtual Meet Template
 
 Template for starting the Virtual Meet in CHZ network, using Moralis
 
