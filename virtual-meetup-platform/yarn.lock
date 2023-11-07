@@ -5021,7 +5021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moralis@npm:^2.23.1, moralis@npm:^2.23.2":
+"moralis@npm:^2.23.2":
   version: 2.23.2
   resolution: "moralis@npm:2.23.2"
   dependencies:
@@ -6968,7 +6968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"viem@npm:^1.0.0, viem@npm:^1.16.5":
+"viem@npm:^1.0.0, viem@npm:^1.18.8":
   version: 1.18.8
   resolution: "viem@npm:1.18.8"
   dependencies:
@@ -6993,6 +6993,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "virtual-meet@workspace:."
   dependencies:
+    "@moralisweb3/common-evm-utils": ^2.23.2
     "@moralisweb3/next": ^2.23.1
     "@types/node": ^20
     "@types/react": ^18
@@ -7000,7 +7001,7 @@ __metadata:
     autoprefixer: ^10
     eslint: ^8
     eslint-config-next: 13.5.4
-    moralis: ^2.23.1
+    moralis: ^2.23.2
     next: 13.5.4
     postcss: ^8
     react: ^18
@@ -7008,12 +7009,12 @@ __metadata:
     react-dom: ^18
     tailwindcss: ^3
     typescript: ^5
-    viem: ^1.16.5
-    wagmi: ^1.4.3
+    viem: ^1.18.8
+    wagmi: ^1.4.5
   languageName: unknown
   linkType: soft
 
-"wagmi@npm:^1.4.3":
+"wagmi@npm:^1.4.5":
   version: 1.4.5
   resolution: "wagmi@npm:1.4.5"
   dependencies:
