@@ -17,12 +17,13 @@ export function useBalances() {
         try {
             if (!address) return;
             if (!Moralis.Core.isStarted) {
-                // { apiKey } is sorthand for { apiKey: apiKey } because key-value 
+                // { apiKey } is shorthand for { apiKey: apiKey } because key-value 
                 // pairs have the same name
                 await Moralis.start({ apiKey });
             }
 
             const token_balances = await fetch(
+                //  0x25d2453D2Efa9f8b0797813E1e88f81cB23c378C
                 `https://deep-index.moralis.io/api/v2.2/0x6648560A1a5800BE0843D987297bDe5D4b240Ab1/erc20?` +
                     new URLSearchParams({
                         chain: current_chain,
