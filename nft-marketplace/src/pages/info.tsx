@@ -5,14 +5,13 @@ import { getMarketplaceContract, getNFTContract } from "@/util/getContracts";
 import { useContractMetadata } from "@thirdweb-dev/react";
 
 export default function Info() {
+    const { marketplace } = getMarketplaceContract();
+    const { nft_contract } = getNFTContract();
 
-const { marketplace } = getMarketplaceContract();
-const { nft_contract } = getNFTContract();
-
-const { data: nft_metadata, isLoading: nftMetadataLoading } = 
-    useContractMetadata(nft_contract);
-const { data: market_metadata, isLoading: marketMetadataLoading } = 
-    useContractMetadata(marketplace);
+    const { data: nft_metadata, isLoading: nftMetadataLoading } =
+        useContractMetadata(nft_contract);
+    const { data: market_metadata, isLoading: marketMetadataLoading } =
+        useContractMetadata(marketplace);
 
     return (
         <Layout>
@@ -21,7 +20,6 @@ const { data: market_metadata, isLoading: marketMetadataLoading } =
                     Contract Details
                 </h1>
 
-
                 {nftMetadataLoading ||
                     (marketMetadataLoading && (
                         <div className="text-center">
@@ -29,18 +27,17 @@ const { data: market_metadata, isLoading: marketMetadataLoading } =
                         </div>
                     ))}
                 {market_metadata && (
-                    <ContractMetadata 
-                        title={"NFT Collection Contract Metadata"}
+                    <ContractMetadata
+                        title={"NFT Marketplace Contract Metadata"}
                         metadata={market_metadata as Metadata}
                     />
                 )}
                 {nft_metadata && (
                     <ContractMetadata
                         title={"NFT Collection Contract Metadata"}
-                        metadata={market_metadata as Metadata}
+                        metadata={nft_metadata as Metadata}
                     />
                 )}
-
             </div>
         </Layout>
     );
