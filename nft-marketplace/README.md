@@ -22,9 +22,13 @@ Populate the `.env.local` file with the necessary environment variables. These a
 
 ### Step 3: Dependency Installation
 
-Execute the following command in your terminal to install the project dependencies:
+Yarn was used the package manager of choice for this project. Execute the following command in your terminal to install the project dependencies:
 
 ```sh
+yarn
+
+or
+
 npm install
 ```
 
@@ -33,5 +37,9 @@ npm install
 To start the development server, run:
 
 ```sh
+yarn run dev
+
+or
+
 npm run dev
 ```
